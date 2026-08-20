@@ -1,0 +1,36 @@
+<!-- Top Navigation -->
+<nav class="sticky top-0 w-full z-50 bg-surface dark:bg-surface-dim border-b-[1.5px] border-on-surface dark:border-outline">
+<div class="flex justify-between items-center px-edge-margin py-stack-sm max-w-max-width mx-auto relative">
+<div class="flex items-center gap-4">
+<span class="font-h2 text-h2 tracking-tighter text-primary dark:text-primary-fixed">MACK</span>
+<span class="font-ui-label text-ui-label uppercase hidden md:inline">HANDYMAN SERVICES</span>
+</div>
+<div class="hidden md:flex items-center gap-6">
+<a class="font-ui-label text-ui-label uppercase text-on-surface-variant hover:text-primary transition-colors" href="#services">SERVICES</a>
+<a class="font-ui-label text-ui-label uppercase text-on-surface-variant hover:text-primary transition-colors" href="#pricing">PRICING</a>
+<a class="font-ui-label text-ui-label uppercase text-on-surface-variant hover:text-primary transition-colors" href="#reviews">REVIEWS</a>
+<a class="font-ui-label text-ui-label uppercase text-on-surface-variant hover:text-primary transition-colors" href="#contact">CONTACT</a>
+<!-- Theme Toggle (Desktop) -->
+<button id="theme-toggle" aria-label="Toggle theme" class="flex items-center justify-center w-9 h-9 border border-outline rounded-full text-on-surface-variant hover:text-primary hover:border-primary transition-colors">
+  <span id="theme-icon" class="material-symbols-outlined text-[20px]">dark_mode</span>
+</button>
+</div>
+<div class="flex items-center gap-2 md:hidden">
+  <!-- Theme Toggle (Mobile visible) -->
+  <button id="theme-toggle-mobile" aria-label="Toggle theme" class="flex items-center justify-center w-9 h-9 border border-outline rounded-full text-on-surface-variant hover:text-primary transition-colors">
+    <span id="theme-icon-mobile" class="material-symbols-outlined text-[20px]">dark_mode</span>
+  </button>
+  <!-- Mobile Menu Button -->
+  <button id="mobile-menu-btn" class="flex items-center justify-center p-2 text-on-surface-variant hover:text-primary transition-colors">
+    <span class="material-symbols-outlined text-[32px]">menu</span>
+  </button>
+</div>
+</div>
+<!-- Mobile Dropdown -->
+<div id="mobile-dropdown" class="hidden md:hidden absolute top-full left-0 w-full bg-surface dark:bg-surface-dim border-b-[1.5px] border-on-surface dark:border-outline flex-col px-edge-margin py-4 gap-4 shadow-lg">
+<a class="mobile-nav-link font-ui-label text-ui-label uppercase text-on-surface-variant hover:text-primary transition-colors" href="#services">SERVICES</a>
+<a class="mobile-nav-link font-ui-label text-ui-label uppercase text-on-surface-variant hover:text-primary transition-colors" href="#pricing">PRICING</a>
+<a class="mobile-nav-link font-ui-label text-ui-label uppercase text-on-surface-variant hover:text-primary transition-colors" href="#reviews">REVIEWS</a>
+<a class="mobile-nav-link font-ui-label text-ui-label uppercase text-on-surface-variant hover:text-primary transition-colors" href="#contact">CONTACT</a>
+</div>
+</nav>

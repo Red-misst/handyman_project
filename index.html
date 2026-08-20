@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en" id="html-root">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Mack Handyman Services</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Literata:opsz,wght@7..72,400;7..72,600&amp;family=Space+Grotesk:wght@500&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-container-highest": "#e5e2db",
+                        "surface-variant": "#e5e2db",
+                        "on-secondary-fixed-variant": "#693c00",
+                        "on-surface-variant": "#44483f",
+                        "on-tertiary-container": "#d0cdc6",
+                        "outline-variant": "#c5c8bc",
+                        "tertiary-container": "#585752",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#b8cda3",
+                        "surface-container-high": "#ebe8e1",
+                        "on-tertiary-fixed-variant": "#484742",
+                        "secondary-container": "#feb15d",
+                        "on-tertiary-fixed": "#1c1c18",
+                        "secondary-fixed-dim": "#ffb86e",
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#2c1600",
+                        "primary": "#334425",
+                        "surface-container": "#f1eee7",
+                        "surface-bright": "#fcf9f2",
+                        "error-container": "#ffdad6",
+                        "outline": "#75786e",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dcdad3",
+                        "tertiary-fixed-dim": "#c9c6c0",
+                        "primary-fixed": "#d4eabd",
+                        "on-secondary": "#ffffff",
+                        "background": "#fcf9f2",
+                        "surface-container-low": "#f6f3ec",
+                        "on-primary-fixed": "#101f05",
+                        "primary-container": "#4a5c3a",
+                        "secondary-fixed": "#ffdcbd",
+                        "on-secondary-container": "#744300",
+                        "inverse-primary": "#b8cda3",
+                        "inverse-surface": "#31312c",
+                        "surface-tint": "#526441",
+                        "on-surface": "#1c1c18",
+                        "secondary": "#8a5100",
+                        "on-error": "#ffffff",
+                        "on-primary-container": "#bed3a9",
+                        "on-background": "#1c1c18",
+                        "surface": "#fcf9f2",
+                        "inverse-on-surface": "#f3f0ea",
+                        "tertiary": "#41403b",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed-variant": "#3a4c2b",
+                        "tertiary-fixed": "#e6e2db",
+                        
+                        // Custom palette aliases mapping to requested colors
+                        "paper": "#fcf9f2", // surface
+                        "card": "#ebe8e1", // surface-container-high
+                        "char": "#1c1c18", // on-surface
+                        "olive": "#334425", // primary
+                        "amber": "#8a5100", // secondary
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "stack-sm": "0.5rem",
+                        "edge-margin": "2rem",
+                        "max-width": "1200px",
+                        "gutter": "1.5rem",
+                        "stack-md": "1.5rem",
+                        "stack-lg": "3rem"
+                    },
+                    fontFamily: {
+                        "body-bold": ["Literata"],
+                        "ui-label": ["Space Grotesk"],
+                        "h3": ["Bebas Neue"],
+                        "h1": ["Bebas Neue"],
+                        "button": ["Space Grotesk"],
+                        "body-lg": ["Literata"],
+                        "h1-mobile": ["Bebas Neue"],
+                        "body-md": ["Literata"],
+                        "h2": ["Bebas Neue"]
+                    },
+                    fontSize: {
+                        "body-bold": ["16px", { lineHeight: "1.8", fontWeight: "600" }],
+                        "ui-label": ["14px", { lineHeight: "1.2", letterSpacing: "0.02em", fontWeight: "500" }],
+                        "h3": ["32px", { lineHeight: "1.0", letterSpacing: "0.01em", fontWeight: "400" }],
+                        "h1": ["64px", { lineHeight: "1.0", letterSpacing: "0.01em", fontWeight: "400" }],
+                        "button": ["16px", { lineHeight: "1.0", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "1.8", fontWeight: "400" }],
+                        "h1-mobile": ["40px", { lineHeight: "1.1", letterSpacing: "0.01em", fontWeight: "400" }],
+                        "body-md": ["16px", { lineHeight: "1.8", fontWeight: "400" }],
+                        "h2": ["48px", { lineHeight: "1.0", letterSpacing: "0.01em", fontWeight: "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: theme('colors.paper');
+            color: theme('colors.char');
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        /* ── Dark Mode Overrides ── */
+        .dark body {
+            background-color: #1c1c18;
+            color: #e6e2db;
+        }
+        .dark .brutal-border {
+            border-color: #75786e;
+        }
+        .dark .brutal-border-b {
+            border-bottom-color: #75786e;
+        }
+        .brutal-border {
+            border: 1.5px solid theme('colors.char');
+        }
+        .brutal-border-b {
+            border-bottom: 1.5px solid theme('colors.char');
+        }
+        .brutal-input-border {
+            border: 1.5px solid #c5c8bc;
+        }
+        
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            box-sizing: border-box;
+            white-space: nowrap;
+        }
+        .ticker {
+            display: inline-block;
+            animation: ticker 12s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-50%, 0, 0); }
+        }
+        .pulse {
+            animation: pulse-animation 2s infinite;
+        }
+        @keyframes pulse-animation {
+            0% { box-shadow: 0 0 0 0 rgba(74, 92, 58, 0.7); }
+            70% { box-shadow: 0 0 0 6px rgba(74, 92, 58, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(74, 92, 58, 0); }
+        }
+        
+        .fade-up {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .letter-fade {
+            opacity: 0;
+            animation: fadeInLetter 0.1s forwards;
+        }
+        @keyframes fadeInLetter {
+            to { opacity: 1; }
+        }
+
+        /* Hover slide animation */
+        .slide-up-badge {
+            transform: translateY(100%);
+            transition: transform 0.3s ease-out;
+        }
+        .group:hover .slide-up-badge {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div id="section-nav"></div>
+    <div id="section-hero"></div>
+    <div id="section-services"></div>
+    <div id="section-portfolio"></div>
+    <div id="section-reviews"></div>
+    <div id="section-pricing"></div>
+    <div id="section-contact"></div>
+    <div id="section-footer"></div>
+
+    <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
