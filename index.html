@@ -114,17 +114,8 @@
             color: theme('colors.char');
             transition: background-color 0.3s ease, color 0.3s ease;
         }
-        /* ── Dark Mode Overrides ── */
-        .dark body {
-            background-color: #1c1c18;
-            color: #e6e2db;
-        }
-        .dark .brutal-border {
-            border-color: #75786e;
-        }
-        .dark .brutal-border-b {
-            border-bottom-color: #75786e;
-        }
+
+        /* ── Base Utility Classes ── */
         .brutal-border {
             border: 1.5px solid theme('colors.char');
         }
@@ -134,7 +125,73 @@
         .brutal-input-border {
             border: 1.5px solid #c5c8bc;
         }
-        
+
+        /* ── Dark Mode: Layout ── */
+        .dark body {
+            background-color: #1c1c18;
+            color: #e6e2db;
+        }
+        .dark .brutal-border        { border-color: #75786e; }
+        .dark .brutal-border-b      { border-bottom-color: #75786e; }
+        .dark .brutal-input-border  { border-color: #55584f; }
+
+        /* ── Dark Mode: Background overrides ── */
+        .dark .bg-surface,
+        .dark .bg-paper             { background-color: #1c1c18; }
+        .dark .bg-background        { background-color: #1c1c18; }
+        .dark .bg-surface-container-low  { background-color: #22221d; }
+        .dark .bg-surface-container      { background-color: #28281f; }
+        .dark .bg-surface-container-high { background-color: #2e2e26; }
+        .dark .bg-surface-container-highest { background-color: #34342b; }
+        .dark .bg-surface-dim        { background-color: #1c1c18; }
+        .dark .bg-surface-bright     { background-color: #3a3a30; }
+        .dark .bg-card               { background-color: #2e2e26; }
+        .dark .bg-surface-variant    { background-color: #3a3a30; }
+        .dark .bg-inverse-surface    { background-color: #e6e2db; }
+
+        /* ── Dark Mode: Text overrides ── */
+        .dark .text-on-surface,
+        .dark .text-char             { color: #e6e2db; }
+        .dark .text-on-background    { color: #e6e2db; }
+        .dark .text-on-surface-variant { color: #c5c8bc; }
+        .dark .text-on-primary-container { color: #b8cda3; }
+        .dark .text-on-secondary-container { color: #ffb86e; }
+        .dark .text-primary          { color: #b8cda3; }
+        .dark .text-secondary        { color: #ffb86e; }
+        .dark .text-olive            { color: #b8cda3; }
+        .dark .text-amber            { color: #ffb86e; }
+        .dark .text-outline          { color: #75786e; }
+        .dark .text-outline-variant  { color: #55584f; }
+
+        /* ── Dark Mode: Border overrides ── */
+        .dark .border-on-surface     { border-color: #75786e; }
+        .dark .border-outline        { border-color: #75786e; }
+        .dark .border-outline-variant{ border-color: #55584f; }
+        .dark .border-olive          { border-color: #b8cda3; }
+        .dark .border-b-\[1\.5px\]  { border-color: #75786e; }
+
+        /* ── Dark Mode: Form inputs ── */
+        .dark input,
+        .dark select,
+        .dark textarea {
+            background-color: #28281f;
+            color: #e6e2db;
+            border-color: #55584f;
+        }
+        .dark input::placeholder,
+        .dark textarea::placeholder  { color: #75786e; }
+
+        /* ── Dark Mode: Nav ── */
+        .dark nav {
+            background-color: #1c1c18;
+            border-color: #75786e;
+        }
+        .dark #mobile-dropdown {
+            background-color: #1c1c18;
+            border-color: #75786e;
+        }
+
+        /* ── Ticker animation ── */
         .ticker-wrap {
             width: 100%;
             overflow: hidden;
@@ -146,18 +203,19 @@
             animation: ticker 12s linear infinite;
         }
         @keyframes ticker {
-            0% { transform: translate3d(0, 0, 0); }
+            0%   { transform: translate3d(0, 0, 0); }
             100% { transform: translate3d(-50%, 0, 0); }
         }
-        .pulse {
-            animation: pulse-animation 2s infinite;
-        }
+
+        /* ── Pulse dot ── */
+        .pulse { animation: pulse-animation 2s infinite; }
         @keyframes pulse-animation {
-            0% { box-shadow: 0 0 0 0 rgba(74, 92, 58, 0.7); }
-            70% { box-shadow: 0 0 0 6px rgba(74, 92, 58, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(74, 92, 58, 0); }
+            0%   { box-shadow: 0 0 0 0 rgba(184, 205, 163, 0.7); }
+            70%  { box-shadow: 0 0 0 6px rgba(184, 205, 163, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(184, 205, 163, 0); }
         }
-        
+
+        /* ── Scroll reveal ── */
         .fade-up {
             opacity: 0;
             transform: translateY(28px);
@@ -167,23 +225,20 @@
             opacity: 1;
             transform: translateY(0);
         }
-        
+
+        /* ── Letter animation ── */
         .letter-fade {
             opacity: 0;
             animation: fadeInLetter 0.1s forwards;
         }
-        @keyframes fadeInLetter {
-            to { opacity: 1; }
-        }
+        @keyframes fadeInLetter { to { opacity: 1; } }
 
-        /* Hover slide animation */
+        /* ── Hover slide badge ── */
         .slide-up-badge {
             transform: translateY(100%);
             transition: transform 0.3s ease-out;
         }
-        .group:hover .slide-up-badge {
-            transform: translateY(0);
-        }
+        .group:hover .slide-up-badge { transform: translateY(0); }
     </style>
 </head>
 <body class="antialiased">
