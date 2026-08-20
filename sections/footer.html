@@ -17,7 +17,8 @@
                 href="#">LOCATION</a>
         </div>
         <div class="font-body-md text-body-md text-on-surface dark:text-on-surface">
-            © 2026 MARCUS ADLER. EVERY JOB. DONE PROPERLY.
+            © <span id="current-year"></span> MARCUS ADLER. EVERY JOB. DONE PROPERLY.
+            <script>document.getElementById('current-year').textContent = new Date().getFullYear();</script>
         </div>
     </div>
 </footer>
